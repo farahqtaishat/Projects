@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6" style="margin-top: 100px">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1>Write Text Into File</h1>
+        </div>
+        <div class="panel-body">
+
+
+          <%= form_tag("/file/write", method: "post") do %>
+          <p>
+            <%= label_tag(:text, "text:") %>
+          </p>
+
+          <p>
+          <%= text_area_tag(:text) %>
+          </p>
+
+          <p>
+          <%= submit_tag "Write into file", class: "btn btn-block btn-lg btn-primary" %>
+          </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
